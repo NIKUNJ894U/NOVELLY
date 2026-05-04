@@ -1,4 +1,4 @@
-# NOVELLY | The Future of Physical Reading in India
+# NOVELLY | YOUR ONE WAY FOR READING
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
