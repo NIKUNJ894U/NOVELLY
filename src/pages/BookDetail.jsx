@@ -192,7 +192,23 @@ export default function BookDetail({ id, onNearbyClick }) {
                   {isWishlisted ? "Wishlisted" : "Add to Wishlist"}
                 </Button>
 
-                <Button variant="outline" className="w-full h-12 border-border text-foreground hover:bg-muted">
+                <Button 
+                  variant="outline" 
+                  className="w-full h-12 border-border text-foreground hover:bg-muted"
+                  onClick={() => {
+                    const url = window.location.href;
+                    if (navigator.share) {
+                      navigator.share({
+                        title: book.title,
+                        text: `Check out ${book.title} on NOVELLY!`,
+                        url: url,
+                      }).catch(console.error);
+                    } else {
+                      navigator.clipboard.writeText(url);
+                      toast.success("Product link copied to clipboard!");
+                    }
+                  }}
+                >
                   <Share2 className="w-5 h-5 mr-2" />
                   Share
                 </Button>
